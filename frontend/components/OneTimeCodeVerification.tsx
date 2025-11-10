@@ -53,7 +53,7 @@ export const OneTimeCodeVerification = () => {
     "inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg " +
     "transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 " +
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 " +
-    "disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed";
+    "disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed min-w-[120px]";
 
   const titleClass = "font-semibold text-gray-800 text-xl mb-4 pb-2 border-b border-gray-200";
 
