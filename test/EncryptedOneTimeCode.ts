@@ -19,6 +19,7 @@ async function deployFixture() {
 }
 
 describe("EncryptedOneTimeCode", function () {
+  // Test suite for FHEVM Encrypted One-Time Code verification
   let signers: Signers;
   let contract: EncryptedOneTimeCode;
   let contractAddress: string;
