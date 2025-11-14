@@ -80,10 +80,9 @@ export const OneTimeCodeVerification = () => {
     );
   }
 
-  // Removed deployment check for now
-  // if (oneTimeCode.isDeployed === false) {
-  //   return errorNotDeployed(chainId);
-  // }
+  if (oneTimeCode.isDeployed === false) {
+    return errorNotDeployed(chainId);
+  }
 
   return (
     <div className="grid w-full gap-6 max-w-6xl mx-auto px-4">

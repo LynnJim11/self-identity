@@ -220,7 +220,7 @@ export const useOneTimeCode = (parameters: {
   }, [contract.address, contract.abi, instance, ethersSigner, expectedCodeInput]);
 
   const verifyCode = useCallback(() => {
-    if (isVerifyingRef.current) {
+    if (isVerifyingRef.current || !contract.address || !instance || !ethersSigner) {
       return;
     }
 
