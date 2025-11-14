@@ -7,7 +7,8 @@ import { ErrorFilterScript } from "@/components/ErrorFilterScript";
 
 export const metadata: Metadata = {
   title: "Encrypted One-Time Code Verification",
-  description: "Verify one-time codes without exposing the code values using FHEVM",
+  description: "Verify one-time codes without exposing the code values using Fully Homomorphic Encryption (FHE) technology on FHEVM",
+  keywords: ["FHE", "FHEVM", "encryption", "one-time code", "blockchain", "privacy"],
 };
 
 export default async function RootLayout({
