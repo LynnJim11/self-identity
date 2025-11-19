@@ -45,6 +45,7 @@ contract EncryptedOneTimeCode is SepoliaConfig {
         returns (ebool encryptedResult)
     {
         require(_isInitialized, "Expected code not set");
+        require(_isValidProof(inputProof), "Invalid input proof");
 
         euint32 encryptedCode = FHE.fromExternal(inputEuint32, inputProof);
 
@@ -62,11 +63,11 @@ contract EncryptedOneTimeCode is SepoliaConfig {
         return isMatch;
     }
 
-    /// @notice Reset the contract state for testing purposes
-    /// @dev This function should be removed in production
-    function resetContract() external {
-        _isInitialized = false;
-        _expectedCode = euint32(0);
+    /// @notice Check if input proof is valid
+    /// @param inputProof the input proof to validate
+    /// @return true if proof is valid, false otherwise
+    function _isValidProof(bytes calldata inputProof) private pure returns (bool) {
+        return inputProof.length >= 32; // Minimum proof size validation
     }
 
     /// @notice Get the encrypted expected code
