@@ -5,6 +5,7 @@
   "license": "BSD-3-Clause-Clear",
   "scripts": {
     "clean": "node -e \"const fs = require('fs'); const path = require('path'); const dir = '.next'; if (fs.existsSync(dir)) { fs.rmSync(dir, { recursive: true, force: true }); }\"",
+    "lint:fix": "next lint --fix",
     "dev:mock": "npm run ishhrunning && npm run clean && npm run genabi && next dev --turbopack",
     "dev": "npm run clean && npm run genabi && next dev --turbopack",
     "dev-webpack": "npm run clean && npm run genabi && next dev",
